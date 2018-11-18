@@ -2,9 +2,10 @@ class Song
   
   attr_accessor :artist, :name
   
+  @@all = []
+  
   def initialize(name)
     @name = name
-    @@all = []
     @@all << self
   end
   
@@ -22,5 +23,17 @@ class Song
       elsif self.name != @artist
       return "nil"
     end
+  end
+  
+  def save
+    @@all << self
+  end
+  
+  def artist_name
+   if @artist.name == @artist.name
+     @artist.name
+   else @artist.name == nil
+     nil
+   end
   end
 end
