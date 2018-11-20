@@ -8,19 +8,19 @@ class Post
     @title = title
     @@all << self
   end
-  
+ 
   def self.all
-    @@all
+    @@all.uniq
+  end
+   
+  def author_name
+    author.name if author
   end
   
-  def author_name(author)
-    author.name
-    if author.name != Author
-      new_author = Author.new(author)
-      new_author
-    end
-  end
   
+  def save
+    @@all << self
+  end
   
   
 end

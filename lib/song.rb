@@ -10,30 +10,19 @@ class Song
   end
   
   def self.all
-    @@all
+    @@all.uniq
   end
   
   def self.artist
     self.artist = self
   end
   
-  def self.artist_name(name)
-    if self.name == @artist
-      self.name
-      elsif self.name != @artist
-      return "nil"
-    end
+  def artist_name
+    artist.name if artist
   end
   
   def save
     @@all << self
   end
-  
-  def artist_name
-   if artist.name == artist.name
-     artist.name
-   else (artist.name.nil?)
-     nil
-   end
-  end
+
 end

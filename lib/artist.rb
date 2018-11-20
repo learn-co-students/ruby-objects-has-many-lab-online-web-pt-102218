@@ -10,7 +10,7 @@ class Artist
   end
 
   def songs
-      @songs
+    @songs
   end
   
   def add_song(song)
@@ -25,6 +25,6 @@ class Artist
   end
   
   def self.song_count
-    Song.all.length - 1
+    Song.all.length
   end
 end
