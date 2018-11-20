@@ -13,9 +13,14 @@ class Post
     @@all
   end
   
-  def author
-    @author
+  def author_name(author)
+    author.name
+    if author.name != Author
+      new_author = Author.new(author)
+      new_author
+    end
   end
+  
   
   
 end

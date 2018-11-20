@@ -30,9 +30,9 @@ class Song
   end
   
   def artist_name
-   if @artist.name == @artist.name
-     @artist.name
-   else @artist.name == nil
+   if artist.name == artist.name
+     artist.name
+   else (artist.name.nil?)
      nil
    end
   end
