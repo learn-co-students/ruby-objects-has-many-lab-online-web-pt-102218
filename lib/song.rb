@@ -1,6 +1,8 @@
+require "pry"
+
 class Song
   
-  attr_accessor :artist, :name
+  attr_accessor :name, :artist
   
   @@all = []
   
@@ -13,16 +15,7 @@ class Song
     @@all.uniq
   end
   
-  def self.artist
-    self.artist = self
-  end
-  
   def artist_name
     artist.name if artist
   end
-  
-  def save
-    @@all << self
-  end
-
 end
